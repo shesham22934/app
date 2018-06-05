@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-declare var window: any;
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -20,44 +20,67 @@ constructor(){
 }
 datachange(event){
   this.myval = event;
-  this.boldtoggle= !this.boldtoggle;
-  this.italictoggle= !this.italictoggle;
-  this.underlinetoggle= !this.underlinetoggle;
 } 
 boldfont(){
-  
+  let editor = document.getElementById('textEditor');
+  const input : HTMLInputElement = <HTMLInputElement>editor
+  let start = input.selectionStart;
+  let end = input.selectionEnd;
+   let a = window.getSelection();
+   console.log('a ', a.toString())
    this.boldtoggle = !this.boldtoggle;
    if(this.boldtoggle){
-     this.myval=`<strong>${this.myval}</strong>`;
+     var newreg = new RegExp(`${a}`,'gmi')
+     this.myval= this.myval.toString().replace(newreg,`<strong>${a}</strong>`);
+    //  this.boldtoggle = !this.boldtoggle;
    }else{
-     this.myval = this.myval.toString().replace(/(<strong>|<\/strong>)/gm,'');
+    console.log(this.myval)
+    var newreg1 = new RegExp(`(<strong>)+${a}(</strong>)+`,'gmi')
+    console.log(newreg1)
+     this.myval = this.myval.toString().replace(newreg1,`${a}`);
+    console.log(this.myval)
    }
 }
 itlalicfont(){
+  let editor = document.getElementById('textEditor');
+  const input : HTMLInputElement = <HTMLInputElement>editor
+  let start = input.selectionStart;
+  let end = input.selectionEnd;
+   let a = window.getSelection();
+   console.log('a ', a.toString())
+    // a.toString().replace(/(\\|s|\*)/gm,'');
   this.italictoggle = !this.italictoggle;
   if(this.italictoggle){
-    this.myval=`<i>${this.myval}</i>`;
+    var newreg = new RegExp(`${a}`,'gmi')
+    this.myval= this.myval.toString().replace(newreg,`<i>${a}</i>`);
+   //  this.boldtoggle = !this.boldtoggle;
   }else{
-    this.myval = this.myval.toString().replace(/(<i>|<\/i>)/gm,'');
+   console.log(this.myval)
+   var newreg1 = new RegExp(`(<i>)+${a}(</i>)+`,'gmi')
+   console.log(newreg1)
+    this.myval = this.myval.toString().replace(newreg1,`${a}`);
+   console.log(this.myval)
   }
 }
 underlinefont(){
+  let editor = document.getElementById('textEditor');
+  const input : HTMLInputElement = <HTMLInputElement>editor
+  let start = input.selectionStart;
+  let end = input.selectionEnd;
+   let a = window.getSelection();
+   console.log('a ', a.toString())
   this.underlinetoggle = !this.underlinetoggle;
   if(this.underlinetoggle){
-    this.myval=`<u>${this.myval}</u>`;
+    var newreg = new RegExp(`${a}`,'gmi')
+    this.myval= this.myval.toString().replace(newreg,`<u>${a}</u>`);
+   //  this.boldtoggle = !this.boldtoggle;
   }else{
-    this.myval = this.myval.toString().replace(/(<u>|<\/u>)/gm,'');
+   console.log(this.myval)
+   var newreg1 = new RegExp(`(<u>)+${a}(</u>)+`,'gmi')
+   console.log(newreg1)
+    this.myval = this.myval.toString().replace(newreg1,`${a}`);
+   console.log(this.myval)
   }
 }
-// setStyles() {
-//   let styles = {
-//     'font-weight':  this.boldtoggle ? 'bold' : 'normal',
-//     'font-style':  this.italictoggle ? 'italic' : 'normal',
-//     'font':  this.underlinetoggle? 'underline' : 'normal',
-//   };
-//   return styles;
-// }
-  receivedMsg($event) {
-    this.title1  = $event;
-  }
+
 }

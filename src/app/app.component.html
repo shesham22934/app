@@ -4,6 +4,6 @@
     <button (click)="underlinefont()">underline</button>
     </div>
     <div>
-    <app-editor [data]="data"  (sendingEvent)="datachange($event)"></app-editor>
+    <app-editor [data]="data"  id = "textEditor" (sendingEvent)="datachange($event)"></app-editor>
     </div>
     <p  [innerHTML]="myval"></p> 
