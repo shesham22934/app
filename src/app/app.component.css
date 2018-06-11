@@ -1,3 +1,126 @@
-.button {
-    padding: 15px 15px;
+textarea {
+    background-color: lightgrey;
+    width: 700px;
+
+    /* border: 25px solid green; */
+    padding: 25px;
+    margin-top: 25px;
+    margin-left: 50px;
+    margin-right: 25px;
+ 
+
 }
+.select option{
+    font-size: 10px;
+}
+
+.button1 {
+    background-color: #4CAF50; /* Green */
+    border-radius:8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; 
+     font-size: 16px; 
+    margin-left: 55px;
+    margin-right: 4px;
+    margin-top: 40px;
+    margin-bottom:5px;
+    cursor: pointer;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border-radius:8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; 
+     font-size: 16px; 
+    margin-left: 55px;
+    margin-right: 4px;
+    margin-top: 40px;
+    margin-bottom:5px;
+    cursor: pointer;
+}
+
+button.dropdown-item{
+    width:35px;
+    height:24px;
+}
+
+.button2 {
+    background-color:#008CBA; 
+    border-radius:8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button3 {
+    background-color: grey; 
+    border-radius:8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 8px;
+    margin-right: 4px;
+    margin-top: 6px;
+    cursor: pointer;
+}
+
+.button4 {
+    background-color:lightseagreen; 
+    border-radius:8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 8px;
+    margin-right: 4px;
+    margin-top: 6px;
+    cursor: pointer;
+}
+
+.button5 {
+    background-color:lightslategray; 
+    border-radius:8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 8px;
+    margin-right: 4px;
+    margin-top: 6px;
+    cursor: pointer;
+}
+
+.button6 {
+    background-color:lightseagreen; 
+    border-radius:8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 8px;
+    margin-right: 4px;
+    margin-top: 6px;
+    cursor: pointer;
+}
+
+

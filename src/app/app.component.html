@@ -1,9 +1,45 @@
 <div>
-    <button (click)="boldfont()">bold</button>
-    <button (click)="itlalicfont()">itlalic</button>
-    <button (click)="underlinefont()">underline</button>
-    </div>
-    <div>
-    <app-editor [data]="data"  id = "textEditor" (sendingEvent)="datachange($event)"></app-editor>
-    </div>
-    <p  [innerHTML]="myval"></p> 
+        <button type = "button" (click)="boldfont()" class="button button1">
+                <span class="glyphicon glyphicon-bold"></span>
+        </button>
+        <button type = "button" (click)="itlalicfont()" class = "button button2">
+                <span class="glyphicon glyphicon-italic"></span>
+        </button>
+        <button type = "button" (click)="underlinefont()" class = "button button3" >
+                <span class="glyphicon glyphicon-text-width"></span>
+        </button>
+        <button type = "button" (click)="getthecode()" class = "button button4" >
+                <span class="glyphicon glyphicon-pencil"></span>
+        </button>
+        <button type = "button" (click)="gettheurl('www.google.com')" class = "button button5" >
+            <span class="glyphicon glyphicon-paperclip"></span>
+        </button>
+        
+      <select (change)="setcolor($event.target.value)">
+        <option>select</option>
+        <option *ngFor="let type of coloritems" [value]="type">{{type}}
+        </option>
+        </select>
+
+        font size: <select (change)="setfont($event.target.value)">
+                <option>select</option>
+                <option *ngFor="let type of sizeitems" [value]="type">{{type}}
+                </option>
+                </select>
+        
+        </div>
+    
+        <div> 
+        <app-editor [data]="data"  id = "textEditor" (sendingEvent)="datachange($event)"></app-editor>
+        </div>
+        <p  [innerHTML]="myval"></p> 
+        <br>
+       
+        
+                    
+
+<textarea *ngIf="la" rows="15" cols="60" [(ngModel)]="myval">
+</textarea>
+<br><br>
+
+    
